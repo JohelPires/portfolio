@@ -1,4 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&family=Nunito:wght@300;400&display=swap');
+
+// #1a2980
+// #0052a4
+// #0076b8
+// #0098be
+// #00b9bb
+// #5bd7b7
+
+// #00c898
+
+$main-gradient: 45deg, #1a2980, #0052a4, #0076b8, #0098be, #00b9bb, #5bd7b7;
+$gradient: #0076b8;
 * {
   margin: 0;
   box-sizing: border-box;
+}
+body {
+  font-family: 'DM Sans', sans-serif;
+  letter-spacing: 2px;
+}
+h1 {
+  font-size: 3vw;
+}
+
+nav {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.9);
+  margin: 10px;
+  padding: 5px 20px;
+  right: 10px;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.5);
+  a {
+    text-decoration: none;
+    color: gray;
+    padding: 0 10px;
+  }
+}
+// nav {
+//   position: fixed;
+//   //   background-color: rgba(255, 255, 255, 0.9);
+//   margin: 10px;
+//   padding: 5px 20px;
+//   right: 10px;
+//   //   border-radius: 5px;
+//   text-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+//   a {
+//     text-decoration: none;
+//     color: rgba(255, 255, 255, 0.5);
+//     padding: 0 10px;
+//   }
+// }
+
+section {
+  height: 100vh;
+  width: 100vw;
+}
+
+#welcome-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+  background-image: radial-gradient(circle, #516c86, #35363b);
+  h1,
+  h2 {
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+}
+
+#projects {
+  text-align: center;
+  background-color: gray;
+  color: white;
+  .projects-container {
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+}
+.project-tile {
+  width: 250px;
+  height: 190px;
+  background-color: white;
+  box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.5);
+  color: gray;
+  border-radius: 5px;
+}
+#hiperfoco {
+  background-image: url('./images/hiperfoco.png');
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 7vw;
+  }
 }
