@@ -30,12 +30,15 @@ nav {
   padding: 5px 20px;
   right: 10px;
   border-radius: 5px;
-  box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 5px 15px -3px rgba(0, 0, 0, 0.7);
 }
 nav a {
   text-decoration: none;
   color: gray;
   padding: 0 10px;
+}
+nav a:hover {
+  color: rgb(40, 40, 83);
 }
 
 section {
@@ -55,16 +58,31 @@ section {
   background-size: cover;
   background-repeat: no-repeat;
 }
-#welcome-section h1,
-#welcome-section h2 {
-  background-color: rgba(0, 0, 0, 0.5);
+#welcome-section .border {
+  background-color: rgba(0, 0, 0, 0.7);
   border: 3px solid white;
   padding: 3px 15px;
   margin: 15px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  text-transform: capitalize;
+}
+
+.links {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 25px;
+  color: white;
+  background: none;
+  border: none;
+  text-decoration: none;
+}
+
+.project-link {
+  text-decoration: none;
+  color: rgb(65, 65, 65);
 }
 
 #projects {
