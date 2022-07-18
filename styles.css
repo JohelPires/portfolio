@@ -13,6 +13,11 @@ h1 {
   font-size: 3vw;
 }
 
+h1,
+h2 {
+  text-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
 nav {
   position: fixed;
   background-color: rgba(255, 255, 255, 0.9);
@@ -38,21 +43,24 @@ section {
   align-items: center;
   justify-content: space-around;
   color: white;
-  background-image: radial-gradient(circle, #516c86, #35363b);
-}
-#welcome-section h1,
-#welcome-section h2 {
-  text-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  background-image: linear-gradient(45deg, rgb(49, 184, 128), rgb(70, 70, 70));
+  box-shadow: 0 5px 15px px rgba(0, 0, 0, 0.5);
 }
 
 #projects {
   text-align: center;
-  background-color: orange;
+  padding: 20px;
+  background-image: linear-gradient(45deg, rgb(87, 48, 138), orangered);
+  background-image: linear-gradient(45deg, rgb(36, 36, 36), rgb(117, 117, 117));
   color: white;
+}
+#projects h2 {
+  font-size: 35px;
 }
 #projects .projects-container {
   padding: 20px;
   display: flex;
+  justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
 }
@@ -60,13 +68,11 @@ section {
 .project-tile {
   width: 340px;
   height: 192px;
-  background-color: white;
   box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.5);
   color: gray;
   border-radius: 3px;
   background-size: contain;
   background-repeat: no-repeat;
-  border-radius: 3px;
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
   -webkit-transition: 0.3s ease-in-out;
@@ -74,6 +80,14 @@ section {
   -moz-transition: 0.3s ease-in-out;
   -o-filter: grayscale(100%);
   transition: filter;
+}
+.project-tile h3 {
+  background-color: yellow;
+  color: rgb(65, 65, 65);
+  padding: 5px;
+  font-size: 17px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+  border-radius: 3px 3px 0 0;
 }
 .project-tile:hover {
   filter: grayscale(0%);
@@ -83,6 +97,7 @@ section {
   -moz-transition: 0.3s ease-in-out;
   -o-filter: grayscale(0%);
   -o-transition: 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 #hiperfoco {
