@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&family=Nunito:wght@300;400&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   box-sizing: border-box;
@@ -19,6 +23,7 @@ h2 {
 }
 
 nav {
+  z-index: 99;
   position: fixed;
   background-color: rgba(255, 255, 255, 0.9);
   margin: 10px;
@@ -34,7 +39,7 @@ nav a {
 }
 
 section {
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
 }
 
@@ -43,7 +48,7 @@ section {
   align-items: center;
   justify-content: space-around;
   color: white;
-  background-image: linear-gradient(45deg, rgb(49, 184, 128), rgb(70, 70, 70));
+  background-image: linear-gradient(180deg, rgb(27, 41, 58), rgb(17, 54, 102));
   box-shadow: 0 5px 15px px rgba(0, 0, 0, 0.5);
 }
 
@@ -51,13 +56,21 @@ section {
   text-align: center;
   padding: 20px;
   background-image: linear-gradient(45deg, rgb(87, 48, 138), orangered);
-  background-image: linear-gradient(45deg, rgb(36, 36, 36), rgb(117, 117, 117));
   color: white;
 }
 #projects h2 {
   font-size: 35px;
 }
-#projects .projects-container {
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align: left;
+  padding: 7px 10px;
+}
+
+.projects-container {
   padding: 20px;
   display: flex;
   justify-content: center;
@@ -67,10 +80,30 @@ section {
 
 .project-tile {
   width: 340px;
-  height: 192px;
+  background-color: white;
   box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.5);
   color: gray;
-  border-radius: 3px;
+  border-radius: 5px;
+  transition: box-shadow;
+  transition-duration: 0.3s;
+}
+.project-tile:hover {
+  box-shadow: 0 10px 15px -5px rgba(0, 0, 0, 0.7);
+}
+.project-tile p,
+.project-tile li {
+  font-family: "Nunito", sans-serif;
+  font-weight: 300;
+  font-size: 13px;
+}
+.project-tile ul {
+  margin: 0;
+  padding-left: 13px;
+}
+.project-tile .img {
+  width: 340px;
+  height: 192px;
+  border-radius: 5px 5px 0 0;
   background-size: contain;
   background-repeat: no-repeat;
   filter: grayscale(100%);
@@ -81,15 +114,7 @@ section {
   -o-filter: grayscale(100%);
   transition: filter;
 }
-.project-tile h3 {
-  background-color: yellow;
-  color: rgb(65, 65, 65);
-  padding: 5px;
-  font-size: 17px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
-  border-radius: 3px 3px 0 0;
-}
-.project-tile:hover {
+.project-tile .img:hover {
   filter: grayscale(0%);
   -webkit-filter: grayscale(0%);
   -webkit-transition: 0.3s ease-in-out;
@@ -99,17 +124,46 @@ section {
   -o-transition: 0.3s ease-in-out;
   cursor: pointer;
 }
+.project-tile h3 {
+  color: rgb(65, 65, 65);
+  padding: 5px;
+  font-size: 17px;
+  border-radius: 3px 3px 0 0;
+}
 
-#hiperfoco {
+#hiperfoco-v1 .img {
+  background-image: url("./images/hiperfoco25-5.png");
+}
+
+#hiperfoco-v2 .img {
   background-image: url("./images/hiperfoco.png");
 }
 
-#zapwork {
+#zapwork .img {
   background-image: url("./images/zapwork.png");
 }
 
-#calculator {
+#calculator .img {
   background-image: url("./images/javascript-calc.png");
+}
+
+#md-notes .img {
+  background-image: url("./images/md-notes.png");
+}
+
+#drum-machine .img {
+  background-image: url("./images/drummachine.png");
+}
+
+#random-quotes .img {
+  background-image: url("./images/random-quotes.png");
+}
+
+#contato {
+  text-align: center;
+}
+#contato h2 {
+  font-size: 35px;
 }
 
 @media (max-width: 600px) {
