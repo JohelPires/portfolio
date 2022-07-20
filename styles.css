@@ -41,12 +41,9 @@ nav a:hover {
   color: rgb(40, 40, 83);
 }
 
-section {
+#welcome-section {
   min-height: 100vh;
   width: 100vw;
-}
-
-#welcome-section {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -84,8 +81,13 @@ section {
   text-decoration: none;
   color: rgb(65, 65, 65);
 }
+.project-link:hover {
+  color: black;
+}
 
 #projects {
+  min-height: 100vh;
+  width: 100vw;
   text-align: center;
   padding: 20px;
   background-image: linear-gradient(45deg, dodgerblue, rgb(63, 27, 52));
@@ -194,10 +196,26 @@ section {
 }
 
 #contato {
+  height: 300px;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
   text-align: center;
+  background-color: black;
+  color: white;
+  padding: 20px;
 }
 #contato h2 {
   font-size: 35px;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: black;
+  color: white;
 }
 
 @media (max-width: 600px) {
