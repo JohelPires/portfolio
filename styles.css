@@ -179,6 +179,10 @@ nav a:hover {
   background-image: url("./images/zapwork.png");
 }
 
+#bibliotecas .img {
+  background-image: url("./images/bibliotecas.png");
+}
+
 #calculator .img {
   background-image: url("./images/javascript-calc.png");
 }
