@@ -167,6 +167,10 @@ nav a:hover {
   border-radius: 3px 3px 0 0;
 }
 
+#cryptohub .img {
+  background-image: url("./images/crypto.png");
+}
+
 #hiperfoco-v1 .img {
   background-image: url("./images/hiperfoco25-5.png");
 }
